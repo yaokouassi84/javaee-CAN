@@ -78,6 +78,12 @@
                                     <button type="submit">Supprimer</button>
                                 </form>
                             </td>
+                            <td>
+                                <form action="/detailsPersonne" method="GET">
+                                    <input type="hidden" name="id" value="${p.id}">
+                                    <button type="submit">Afficher les détails</button>
+                                </form>
+                            </td>
                         </tr>  
                     </c:forEach>
                 </tbody>                

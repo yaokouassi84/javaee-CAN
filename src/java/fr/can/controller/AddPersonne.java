@@ -28,7 +28,31 @@ public class AddPersonne extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String nom = request.getParameter("nom");
+       /* String nom = request.getParameter("nom");
+        String prenom = request.getParameter("prenom");
+        String ageParameter = request.getParameter("age");   
+        Integer age = Integer.parseInt(ageParameter);
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("CanPU");
+        EntityManager em = emf.createEntityManager();
+        EntityTransaction tx = em.getTransaction();
+        
+            tx.begin();
+            Personne p = new Personne();
+            p.setNom(nom);
+            p.setPrenom(prenom);
+            p.setAge(age);           
+            em.persist(p);
+            tx.commit();
+            em.close();
+           */ 
+        
+    }
+
+    
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+         String nom = request.getParameter("nom");
         String prenom = request.getParameter("prenom");
         String ageParameter = request.getParameter("age");   
         Integer age = Integer.parseInt(ageParameter);
@@ -46,21 +70,8 @@ public class AddPersonne extends HttpServlet {
             em.close();
             
         
-    }
-
-    
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        
         
     }
-
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
     @Override
     public String getServletInfo() {
         return "Short description";

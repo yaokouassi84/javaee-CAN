@@ -8,7 +8,8 @@
     </head>
     <body>
         <h1>Hello World!</h1>
-        <form name="personne" action="/addPersonne" method="POST" enctype="multipart/form-data">
+<!--        <form name="personne" action="addPersonne" method="POST">-->
+<form name="personne" action="/addPersonne" method="POST" enctype="multipart/form-data">
             <label for="nom">Nom</label>
             <input type="text" name="nom" />
             <label for="prenom">Prénom</label>
